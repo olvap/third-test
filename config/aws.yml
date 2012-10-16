@@ -1,0 +1,16 @@
+#"Tong","AKIAIBQXBQAIH63NUFGA","ptoun2ttVcvazeycC7QT2fZirrFWYbqIKSLkeTf3"
+#"Lumos","AKIAICLL26AEELJWAEEA","ZbuEbhj9gBiDkECppVgkhROVdxRz0Xe2kyhalCHs"
+
+common: &common
+  access_key_id: AKIAICLL26AEELJWAEEA
+  secret_access_key: ZbuEbhj9gBiDkECppVgkhROVdxRz0Xe2kyhalCHs
+
+development:
+  <<: *common
+
+test:
+  <<: *common
+
+# set these environment variables on your production server
+production:
+  <<: *common

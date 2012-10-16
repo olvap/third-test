@@ -1,0 +1,320 @@
+<h1>MyCharade Api</h1>
+<div style="margin: 0 0.5%; width: 32%; float: left">
+	<form action="/api/user/login.json" method="post">
+		<fieldset>
+			<legend>
+				Login
+			</legend>
+			<tr>
+				<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"socialId":"asd",&#10;"userName":"cuongnt",&#10;"firstName":"cuong",&#10;"lastName":"ga",&#10;"email":"emga@mes.com",&#10;"deviceToken":"1sdadasda",&#10;"socialToken":"rwrwrw",&#10;"accountType":"100"&#10;}</textarea></td>
+			</tr>
+			<input type="submit" value="Login" />
+		</fieldset>
+
+	</form>
+
+	<form action="/api/user/info.json" method="post">
+		<fieldset>
+			<legend>
+				Info
+			</legend>
+			<tr
+				<td>
+					<textarea style="width: 100%; height: 200px;" name="params">{&#10;"socialId":"asd",&#10;"accountType":"100"&#10}</textarea>
+				</td>
+			</tr>
+			<button id="submit" type="submit">
+				Submit
+			</button>
+			<button id="submit" type="reset">
+				Cancel
+			</button>
+		</fieldset>
+	</form>
+
+	<form method="post" action="/api/user/syncfriend.json">
+		<fieldset>
+			<legend>
+				Sysn Friend
+			</legend>
+			<table id="tableWrapper">
+				<tr>
+					<td>facebookId</td>
+					<td>
+					<input type="text" name="facebookId" />
+					</td>
+				</tr>
+				<tr>
+					<td>Friend</td>
+					<td>
+					<input type="text" value="" name="friends[]" />
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td></td>
+					<td>
+					<input type="button" id="add" value="Add Friends" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p>
+						<label>params: 							<textarea name="params"></textarea> </label>
+					</p>
+					<input type="submit" name="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	
+	<form action="/api/game/getmyinvitedgame.json" method="post">
+		<fieldset>
+			<legend>
+				Get invited game
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"socialId":"1213",&#10;"accountType":"123"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	
+	<form action="/api/game/getmycreatedgame.json" method="post">
+		<fieldset>
+			<legend>
+				Get created game
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"socialId":"1213",&#10;"accountType":"123"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+
+</div>
+
+<div style="margin: 0 0.5%; width: 32%; float: left">
+	<form action="/api/game/create.json" method="post">
+		<fieldset>
+			<legend>
+				Create Game
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td>					<textarea style="width: 100%; height: 200px;" name="params">{&#10;"ownerSocialId":"asd",&#10;"oppSocialId":"asd",&#10;"wordId":"as",&#10;"packId":"asd",&#10;"videoId":"asd",&#10;"gameType":"ad",&#10;"accountType":"ad"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend>
+				Create WordPack
+			</legend>
+			<p>
+				<input type="text" value="" name="id" />
+			</p>
+			<p>
+				<input type="text" value="" name="packName" />
+			</p>
+			<p>
+				<label>params: 					<textarea name="params"></textarea> </label>
+			</p>
+			<p>
+				<input type="submit" value="submit" name="submit" />
+			</p>
+		</fieldset>
+	</form>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend>
+				Create Word
+			</legend>
+
+			<p>
+				<input type="text" value="" name="id" placeholder="id" />
+			</p>
+			<p>
+				<input type="text" value="" name="wordName" placeholder="wordName" />
+			</p>
+			<p>
+				<input type="text" value="" name="packId" placeholder="packId" />
+			</p>
+			<p>
+				<input type="text" value="" name="wikiLink" placeholder="wikiLink" />
+			</p>
+			<p>
+				<input type="text" value="" name="wordBuck" placeholder="wordBuck" />
+			</p>
+			<p>
+				<label>params: 					<textarea name="params"></textarea> </label>
+			</p>
+			<p>
+				<input type="submit" value="submit" name="submit" />
+			</p>
+		</fieldset>
+	</form>
+</div>
+<div style="margin: 0 0.5%; width: 32%; float: left">
+	<form action="/api/game/update.json" method="post">
+		<fieldset>
+			<legend>
+				Update game
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td>					<textarea style="width: 100%; height: 200px;" name="params">{&#10;"gameId":"1213",&#10;"winnerSocialId":"123",&#10;"loserSocialId":"123",&#10;"accountType":"123"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<form action="/api/game/getmygamehistory.json" method="post">
+		<fieldset>
+			<legend>
+				Get History game
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"socialId":"1213",&#10;"accountType":"123"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<form action="/api/video/create.json" method="post">
+		<fieldset>
+			<legend>
+				Create Video
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"socialId":"1213",&#10;"accountType":"123",&#10;"wordId":"1213",&#10;"packId":"123",&#10;"videoWOWZAUrl":"1213"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<form action="/api/game/getinfo.json" method="post">
+		<fieldset>
+			<legend>
+				Get Game info
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"gameId":"1213"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<form action="/api/video/getinfo.json" method="post">
+		<fieldset>
+			<legend>
+				Get Video info
+			</legend>
+			<table width="100%">
+				<tr>
+					<td>params</td>
+				</tr>
+				<tr>
+					<td><textarea style="width: 100%; height: 200px;" name="params">{&#10;"videoId":"1213"&#10;}</textarea></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</div>
+
+<%= javascript_include_tag "jquery.json-2.3.min" %>
+<script type="text/javascript">
+		/*
+		(function($) {
+						$.fn.serializeFormJSON = function() {
+							var o = {};
+							var a = this.serializeArray();
+							$.each(a, function() {
+								if (o[this.name]) {
+									if (!o[this.name].push) {
+										o[this.name] = [o[this.name]];
+									}
+									o[this.name].push(this.value || '');
+								} else {
+									o[this.name] = this.value || '';
+								}
+							});
+							return o;
+						};
+					})(jQuery);
+				
+					$("form").submit(function() {
+						var params = $(this).serializeFormJSON();
+						delete params.params;
+						$("textarea", $(this)).val($.toJSON(params));
+					}); */
+		
+	
+</script>
